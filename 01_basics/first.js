@@ -105,12 +105,12 @@ let score = "hitesh"
 
 // console.log("1" + 2);
 // console.log(1 + "2");
-// console.log("1" + 2 + 2);
-// console.log(1 + 2 + "2");
+// console.log("1" + 2 + 2);            //122
+// console.log(1 + 2 + "2");            //32         goto link for study 
 
 //console.log( (3 + 4) * 5 % 3);
 
-// console.log(+true);              //true
+//console.log(+true);              //1
 // console.log(+"");                 //0
 
 // let num1, num2, num3
@@ -124,3 +124,84 @@ let score = "hitesh"
 
 //link to study
 //https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion
+
+
+//  lect 8  comparison in javascipt______________________________________________________________________________________________
+// console.log(2 > 1);
+// console.log(2 >= 1);
+// console.log(2 < 1);
+// console.log(2 == 1);
+// console.log(2 != 1);
+
+//comparison are not consistent bcz null sometime give value nan sometimes 0 so inconsistcy in js so avoid this kind of comprisn
+// console.log("2" > 1);
+// console.log("02" > 1);
+
+// console.log(null > 0);
+// console.log(null == 0);
+// console.log(null >= 0);
+
+
+// //also this
+// console.log(undefined == 0);
+// console.log(undefined > 0);
+// console.log(undefined < 0);
+
+// // === 
+
+//console.log("2" === 2);
+
+
+
+// lect 9 datatypes summ________________________________________________________________________________________________
+//  Primitive
+
+//  7 types : String, Number, Boolearn, null, undefined, Symbol, BigInt
+
+// const score = 100
+// const scoreValue = 100.3
+
+// const isLoggedIn = false
+// const outsideTemp = null
+// let userEmail;
+
+// const id = Symbol('123')
+// const anotherId = Symbol('123')
+
+// console.log(id === anotherId);
+
+// // const bigNumber = 3456543576654356754n
+
+
+
+// // Reference (Non primitive)
+
+// // Array, Objects, Functions
+
+// const heros = ["shaktiman", "naagraj", "doga"];
+// let myObj = {
+//     name: "hitesh",
+//     age: 22,
+// }
+
+// const myFunction = function(){
+//     console.log("Hello world");
+// }
+
+// console.log(typeof anotherId);
+
+
+//typeof nono primitive datatype
+// typeof {}         // "object"
+// typeof []         // "object"
+// typeof function(){}  // "function"
+// typeof new Date() // "object"
+
+
+// https://262.ecma-international.org/5.1/#sec-11.4.3
+
+//commit lect 10________________________________________________________stack and heap_______________
+
+
+
+//primitive datatype are storedin (stack)        and in heap all noo primitive datatype stored
