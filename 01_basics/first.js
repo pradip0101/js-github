@@ -55,7 +55,7 @@ var bankname="fs";   //this is less used becasuse of its scope it can be changab
 //lect 6 datatypes conversion 
 
 
-let score = "hitesh"
+//let score = "hitesh"
 
 // console.log(typeof score);
 // console.log(typeof(score));
@@ -205,3 +205,115 @@ let score = "hitesh"
 
 
 //primitive datatype are storedin (stack)        and in heap all noo primitive datatype stored
+
+
+//lect11 ____________________________________________________________String ______________________
+// const name = "hitesh"
+// const repoCount = 50
+
+// console.log(name + repoCount + " Value");              //not good way
+
+//console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);          //do this way
+
+//const gameName = new String('hitesh-hc-com')                                  //another way of declaring string
+
+// console.log(gameName[0]);
+// console.log(gameName.__proto__);
+
+
+// console.log(gameName.length);
+// console.log(gameName.toUpperCase());
+// console.log(gameName.charAt(2));
+// console.log(gameName.indexOf('t'));
+
+// const newString = gameName.substring(0, 4)
+// console.log(newString);
+
+// const anotherString = gameName.slice(-8, 4)        //not working bcz of negative value
+// console.log(anotherString);
+
+// const newStringOne = "   hitesh    "
+// console.log(newStringOne);
+// console.log(newStringOne.trim());
+
+// const url = "https://hitesh.com/hitesh%20choudhary"
+
+// console.log(url.replace('%20', '-'))
+
+// console.log(url.includes('sundar'))
+
+//console.log(gameName.split('-'));
+
+//__________________________________lect12__________________numberand maths________________________________________
+
+// const score = 400
+//  console.log(score);
+
+// const balance = new Number(100)               //this give output as[number:100]  with proper datatype
+//  console.log(balance);
+
+// console.log(balance.toString().length);
+// console.log(balance.toFixed(1));
+
+// const otherNumber = 123.8966
+
+// // console.log(otherNumber.toPrecision(4));
+
+// const hundreds = 1000000
+//console.log(hundreds.toLocaleString('en-IN'));//this convert 1000000 this confusing with 0 no into 10 000 000 format indan format
+
+// +++++++++++++ Maths +++++++++++++++++++++++++++++
+
+ //console.log(Math);
+// console.log(Math.abs(-4));           //gives absoulute value means convert -values into positve only
+// console.log(Math.round(4.6));    //this captures nearest value of this value big or small (full value)
+// console.log(Math.ceil(4.2));   //this gives only topest complete value means 5 
+// console.log(Math.floor(4.9));     //this gives only bottoms first compler value means 4
+// console.log(Math.min(4, 3, 6, 8));  //finds min value from arreay
+// console.log(Math.max(4, 3, 6, 8));
+
+console.log(Math.random());                //gives us random vlaue for between 0 to 1 like 0.1,0.2 ,0.5  but if we  want value
+console.log((Math.random()*10) + 1);        //between 1 to 10 for sudo game then use this
+// console.log(Math.floor(Math.random()*10) + 1);    //after multiplying it in some case 0.1*10 gives 0 in that case we want to 
+                                                    //avoid it so +1 it gives result 1
+
+ //but in some cases we want values in particular range the we use min and max
+// const min = 10
+// const max = 20
+
+// console.log(Math.floor(Math.random() * (max - min + 1)) + min)
+
+// ______________________________________________________date and time__________________lect13_____________________
+
+
+// Dates
+
+let myDate = new Date()
+// console.log(myDate.toString());
+// console.log(myDate.toDateString());
+// console.log(myDate.toLocaleString());
+// console.log(typeof myDate);
+
+// let myCreatedDate = new Date(2023, 0, 23)
+// let myCreatedDate = new Date(2023, 0, 23, 5, 3)
+// let myCreatedDate = new Date("2023-01-14")
+// let myCreatedDate = new Date("01-14-2023")
+// console.log(myCreatedDate.toLocaleString());
+
+// let myTimeStamp = Date.now()
+
+// console.log(myTimeStamp);
+// console.log(myCreatedDate.getTime());
+// console.log(Math.floor(Date.now()/1000));
+
+// let newDate = new Date()
+// console.log(newDate);
+// console.log(newDate.getMonth() + 1);
+// console.log(newDate.getDay());
+
+// `${newDate.getDay()} and the time `
+
+// newDate.toLocaleString('default', {
+//     weekday: "long",
+    
+// })
