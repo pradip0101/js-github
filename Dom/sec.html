@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+
+    <!--        ________________this is console code- _____-->
+            document.getElementById('title')   this take complete html code of title id
+            document.getElementById('title').id    this print
+            document.getElementById('title').class     we not use this way it print undefined
+            document.getElementById('title').classname    use this way for classname
+
+
+            if we want to take attribute then
+            document.getElementById('title').getAttribute('id')          this take value of id attribute
+            document.getElementById('title').getAttribute('class')       this take value of class attribute
+            
+            we also set attribute for using this 
+            document.getElementById('title').setAttribute('class','test') 
+
+            const title= document.getElementById('title')
+            we also apply style for h1tag using its id
+            title.style.backgroundcolor="green"
+
+            title.style.padding="px"
+
+             title.style.borderradius="15px"
+             
+             how to fech content of this html elements
+             title.innerHTML  //this return complete html code of title id
+             title.innerText       //this return  only  h tag not span tag
+             <!-- <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>-->
+             title.textcontent      //this return content of span also
+
+
+
+             now well see queryselector 
+
+             document.querySelector('h2')        //it select only first h2 but if we want all <h2>
+                document.querySelector('#title')  //return html code of title id
+                document.querySelector('.heading')   //return html code of heading class
+                document.querySelector('input[type="password"]')     //we also select input element in this return html code
+                document.querySelector('p:first-child')   //we also select paragra if we have multiple p then use firstchild,secchild
+
+
+                we also select ul list
+                document.querySelector('ul')
+                const myul=document.querySelector('ul') print undefined
+
+                myul.querySelector('li')
+                const turngreen= myul.querySelector('li')
+                turngreen.style.backgroundcolor="green"
+                turngreen.innerText   //print one
+                turngreen.innerText="five" //change one to five
+
+
+                //now we ll see querySelectorAll
+                document.querySelectorAll('li')  //this return all li
+                //it retur node list not array
+
+                const templi=document.querySelector('li')
+                templi.style.color="green"   //this not work bcz it is node list so we have to teel it which element apply
+                templi[0].style.color="green"
+
+                //now we 'll see another method
+                document.getElementByClassName('list-item')
+                how to applay loop here
+                const tempclasslist=document.getElementByClassName('list-item')
+                tempclasslist.forEach(function(li)
+                {
+                    console.log(li)
+                })
+
+                //above not work for node list we have to convert html collection by using method
+                 Array.from(tempclasslist)// now we'll get value in array
+                 const myconvertedarray=Array.from(tempclasslist)
+                 myconvertedarray.forEach(function(){
+                    li.style.color="orange"
+                 })   //press enter
+
+        </body>
+</html>
