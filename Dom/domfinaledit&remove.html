@@ -18,7 +18,7 @@
         document.querySelector('.language').appendChild(li)
     }
     addLanguage("python")
-    addLanguage("typescript")
+    addLanguage("typescript")       //above is also workable but for large project use follwing optimiz technique
 
     function addOptiLanguage(langName){
         const li = document.createElement('li');
@@ -31,11 +31,13 @@
     const secondLang = document.querySelector("li:nth-child(2)")
     console.log(secondLang);
     //secondLang.innerHTML = "Mojo"
+
+    //above will also work but below is optimize purpuse
     const newli = document.createElement('li')
     newli.textContent = "Mojo"
     secondLang.replaceWith(newli)
 
-    //edit
+    //edit           another example of edit           
     const firstLang = document.querySelector("li:first-child")
     firstLang.outerHTML = '<li>TypeScript</li>'
 
